@@ -9,14 +9,14 @@
 
   <script>
     const params = new URLSearchParams(window.location.search);
-    const code = params.get("code");
+    const authCode = params.get("auth_code");
     const state = params.get("state");
 
-    if (code) {
-      document.getElementById("result").innerText = `Authorization Code: ${code}`;
-      console.log("Authorization Code:", code);
+    if (authCode) {
+      document.getElementById("result").innerText = `Authorization Code: ${authCode}`;
+      console.log("Authorization Code:", authCode);
     } else {
-      document.getElementById("result").innerText = "No code found.";
+      document.getElementById("result").innerText = "No auth_code found in URL.";
     }
   </script>
 </body>
